@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken')
-const dotenv = require("dotenv")
+const dotenv = require("dotenv").config()
 const cookieParser = require('cookie-parser')
 
-const secret = process.env.MY_SECRET
+const secret = process.env.SECRET
 
 const getUser = async (username) => {
     return { userId: 123, password: "123456", username: username }
